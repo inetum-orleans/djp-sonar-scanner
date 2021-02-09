@@ -1,0 +1,4 @@
+{
+  "directory": ".docker/sonar-scanner",
+  "sonar_scanner_version": "latest"
+}
