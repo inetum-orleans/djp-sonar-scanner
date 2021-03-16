@@ -27,6 +27,22 @@ ddb.Compose(
 )
 ```
 
+## Usage
+
+If you plan to use an existing instance of sonarqube with a sonar-project.properties file in your project, you have to mount a volume in the sonar-scanner like below :
+
+```jsonnet
+ddb.Compose(
+  ddb.with(
+    import '.docker/sonar-scanner/djp.libjsonnet',
+    params={global: true},
+    volumes+: [
+      ddb.path.project + ":/usr/src"
+    ]
+  )
+)
+```
+
 ## Parameters
 
 | name  | type | description |
