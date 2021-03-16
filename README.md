@@ -37,7 +37,7 @@ ddb.Compose(
     import '.docker/sonar-scanner/djp.libjsonnet',
     params={global: true},
     volumes+: [
-      ddv.path.project + ":/usr/src"
+      ddb.path.project + ":/usr/src"
     ]
   )
 )
